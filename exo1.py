@@ -20,6 +20,10 @@ class Node:
     def setLeft(self,left):
         self.__left=left
 
+    def __str__(self):
+        return "La valeur du noeud est :"+str(self.__val)
+
 o=Node(12,None,None)
+print(o)
 
 
