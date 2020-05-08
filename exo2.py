@@ -57,6 +57,15 @@ class BinaryTree:
         else:
             return 1 + max(str(self.height(node.getLeft())) + str(self.height(node.getRight())))
 
+    def belongs(self,node,val):
+        if node is None:
+            return False
+        elif node.getVal()==val:
+            return True
+        else:
+            return  self.belongs(node.getLeft(),val) or self.belongs(node.getRight(),val)
+
+
 
 
 
@@ -74,6 +83,10 @@ arbre.getROOT().getRight().getRight().setLeft(Node(18,None,None))
 arbre.getROOT().getRight().getRight().setRight(Node(21,None,None))
 
 print(arbre.size(arbre.getROOT()))
+print(arbre.height(arbre.getROOT()))
+print(arbre.sumValues(arbre.getROOT()))
+print(arbre.numberLeaves(arbre.getROOT()))
+print(arbre.numberInternalNodes(arbre.getROOT()))
 print(arbre.height(arbre.getROOT()))
 
 
